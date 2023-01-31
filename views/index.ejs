@@ -6,10 +6,134 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-  He
+  <main class="bg-success">
+    <section class=" w-75 mx-auto">
+      <div class="p-1 bg-secondary text-dark">
+        <h5>Purpose of police clearance</h5>
+      </div>
+      <div class="d-flex p-3 text-center  bg-white text-dark">
+        Purpose <span class="text-danger ms-1 mx-4"> *</span>
+        <input class="ms-5" type="radio" name="" id=""> On
+        <input class="ms-3" type="radio" name="" id=""> Other
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Country of Traval</p> <span class="ms-1 text-danger"> *</span>
+        <select class="form-select w-25 ms-3" aria-label="Default select example">
+          <option value="1">a</option>
+          <option value="2">a</option>
+          <option value="3">a</option>
+        </select>
+      </div>
+    </section>
+    <section class=" w-75 mx-auto mt-5">
+      <div class="p-1 bg-secondary text-dark">
+        <h5>Personal Information</h5>
+      </div>
+      <div class="d-flex p-3 text-center  bg-white text-dark">
+        PASSPORT NO <span class="text-danger ms-1 mx-4"> *</span>
+        <input class="form-control text-uppercase w-25 " type="text" placeholder="PASSPORT NO"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Issuing Country</p> <span class="ms-1 text-danger"> *</span>
+        <select class="form-select w-25 ms-3" aria-label="Default select example">
+          <option value="1">a</option>
+          <option value="2">a</option>
+          <option value="3">a</option>
+        </select>
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Issuing Date</p> <span class="ms-1 text-danger mx-3"> *</span>
+        <input class="form-control text-uppercase w-25 ms-4" type="date" placeholder="Issuing Date"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Issuing Place</p> <span class="ms-1 text-danger mx-2"> *</span>
+        <input class="form-control text-uppercase w-25 ms-4" type="text" placeholder="Issuing Place"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Expiry Date</p> <span class="ms-1 text-danger mx-4"> *</span>
+        <input class="form-control text-uppercase w-25 ms-4" type="text" placeholder="Date"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Mobile No</p> <span class="ms-1 text-danger mx-4"> *</span>
+        <input class="form-control text-uppercase ms-4 w-25" type="number" placeholder="Mobile NO"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Email</p> <span class="ms-1 mx-5 text-danger"> *</span>
+        <input class="form-control ms-4 text-uppercase w-25" type="text" placeholder="Email"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>NID</p> <span class="ms-1 mx-5 text-danger"> *</span>
+        <form action="/file" method="post" enctype="multipart/form-data" class="d-flex">
+          <input class="form-control ms-5 text-uppercase w-25" type="text" placeholder="NID"
+            aria-label=".form-control-sm example">
+          <input name="fileName" class=" ms-3" type="file" aria-label=".form-control-sm example"><br>
+          <button type="submit">upload</button>
+        </form>
+      </div>
+
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Father Name</p> <span class="ms-1 mx-1 text-danger"> *</span>
+        <input class="form-control ms-4 text-uppercase w-25" type="text" placeholder="Father Name"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark ">
+        <p>Father's/Husband <span class="d-flex text-center">Name</span> </p> <span class="ms-1 mx-5 text-danger">
+          *</span>
+        <input class="form-control ms-1 text-uppercase w-25" type="text" placeholder="Father's/Husband Name"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center  bg-white text-dark">
+        Relation <span class="text-danger ms-1 mx-2"> *</span>
+        <input class="ms-5" type="radio" name="" id="">
+        Father
+        <input class="ms-3" type="radio" name="" id=""> Other
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Mother's Name</p> <span class="ms-1 mx-3 text-danger"> *</span>
+        <input class="form-control ms-2 text-uppercase w-25" type="text" placeholder="Mother's Name"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark">
+        <p>Date of Brith</p> <span class="ms-1 mx-3 text-danger"> *</span>
+        <input class="form-control ms-3 text-uppercase w-25" type="date" placeholder="Date of Brith"
+          aria-label=".form-control-sm example">
+      </div>
+      <div class="d-flex p-3 text-center  bg-white text-dark">
+        Solutation <span class="text-danger ms-1 mx-4"> *</span>
+        <input class="ms-5" type="radio" name="" id="">
+        Mr
+        <input class="ms-3" type="radio" name="" id=""> Mrs
+        <input class="ms-3" type="radio" name="" id=""> None
+      </div>
+      <div class="d-flex p-3 text-center bg-white text-dark ">
+        <p>Photo (Maximum 150 kb) </p> <span class="ms-1 mx-3 text-danger">
+          *</span>
+          <form action="/image" method="post" enctype="multipart/form-data" class="d-flex">
+        <input class="image" type="file" placeholder="PASSPORT NO" aria-label=".form-control-sm example">
+        </form>
+      </div>
+      <section class="bg-white">
+        <button class="btn btn-primary" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit">Save</button>
+      </section>
+    </section>
+    
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
