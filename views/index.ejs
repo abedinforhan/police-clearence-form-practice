@@ -5,120 +5,223 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <main class="bg-success">
-    <section class=" w-75 mx-auto">
-      <div class="p-1 bg-secondary text-dark">
-        <h5>Purpose of police clearance</h5>
+  <main class="bg-background">
+    <div class="text-center py-5 text-primary fw-bold">
+      <h3>Police Clearance Certificate (PCC)</h3>
+      <p>For applications under Dhaka, it will take 7 working days.</p>
+      <p>For applications outside Dhaka, it may take 15 working days or more.</p>
+    </div>
+
+    <section class="w-75 mx-auto bg-white">
+      <div class="p-1 bg-background bg-heading text-dark p-2">
+        <h5 class="fw-normal border border-2">Purpose of Police Clearance</h5>
       </div>
-      <div class="d-flex p-3 text-center  bg-white text-dark">
-        Purpose <span class="text-danger ms-1 mx-4"> *</span>
-        <input class="ms-5" type="radio" name="" id=""> On
-        <input class="ms-3" type="radio" name="" id=""> Other
-      </div>
-      <div class="d-flex p-3 text-center bg-white text-dark">
-        <p>Country of Traval</p> <span class="ms-1 text-danger"> *</span>
-        <select class="form-select w-25 ms-3" aria-label="Default select example">
-          <option value="1">a</option>
-          <option value="2">a</option>
-          <option value="3">a</option>
-        </select>
+
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-4">
+            <p class="text-end">Purpose <span class="text-danger">*</span></p>
+          </div>
+
+          <div class="col-8">
+            <input class="" type="radio" name="purpose" id="purpose"> Go Abroad
+            <input class="ms-3" type="radio" name="purpose" id="purpose"> Others
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <p class="text-end">Country of Travel <span class="  text-danger ms-1">*</span></p>
+          </div>
+          <div class="col-8">
+            <select class="form-select w-50" aria-label="Default select example">
+              <option value="1">a</option>
+              <option value="2">a</option>
+              <option value="3">a</option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
     <section class=" w-75 mx-auto mt-5">
-      <div class="p-1 bg-secondary text-dark">
+      <div class="p-1 bg-background bg-heading text-dark">
         <h5>Personal Information</h5>
       </div>
-      <form action="/file" method="post" enctype="multipart/form-data" class="bg-white">
-        <div class="d-flex p-3 text-center  bg-white text-dark">
-          PASSPORT NO <span class="text-danger ms-1 "> *</span>
-          <input name="passportNo" class="form-control text-uppercase w-25 " type="text" placeholder="PASSPORT NO"
-            aria-label=".form-control-sm example">
+      <form action="/file" method="post" enctype="multipart/form-data" class="bg-white ">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">PASSPORT NO <span class="text-danger ms-1 "> *</span></p>
+          </div>
+          <div class="col-8">
+            <input name="passportNo" class="form-control text-uppercase w-50 " type="text" placeholder="PASSPORT NO"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Issuing Country</p> <span class="ms-1 text-danger"> *</span>
-          <select class="form-select w-25 " aria-label="Default select example">
-            <option value="1">a</option>
-            <option value="2">a</option>
-            <option value="3">a</option>
-          </select>
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Issuing Country <span class="ms-1 text-danger"> *</span></p>
+          </div>
+          <div class="col-8">
+            <select class="form-select w-50 " aria-label="Default select example">
+              <option value="1">a</option>
+              <option value="2">a</option>
+              <option value="3">a</option>
+            </select>
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Issuing Date</p> <span class="ms-1 text-danger"> *</span>
-          <input name="issuingDate" class="form-control text-uppercase w-25" type="date" placeholder="Issuing Date"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Issuing Date<span class="ms-1 text-danger"> *</span></p>
+          </div>
+          <div class="col-8">
+            <input name="issuingDate" class="form-control text-uppercase w-50" type="date" placeholder="Issuing Date"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Issuing Place</p> <span class="ms-1 text-danger"> *</span>
-          <input name="issuingPlace" class="form-control text-uppercase w-25" type="text" placeholder="Issuing Place"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Issuing Place <span class="ms-1 text-danger"> *</span></p>
+          </div>
+          <div class="col-8">
+            <input name="issuingPlace" class="form-control text-uppercase w-50" type="text" placeholder="Issuing Place"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Expiry Date</p> <span class="ms-1 text-danger"> *</span>
-          <input name="expiryDate" class="form-control text-uppercase w-25" type="text" placeholder="Date"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Expiry Date <span class="ms-1 text-danger"> *</span></p>
+          </div>
+          <div class="col-8">
+            <input name="expiryDate" class="form-control text-uppercase w-50" type="text" placeholder="Date"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Mobile No</p> <span class="ms-1 text-danger"> *</span>
-          <input name="mobileNo" class="form-control text-uppercase w-25" type="number" placeholder="Mobile NO"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Mobile No <span class="ms-1 text-danger"> *</span></p>
+          </div>
+          <div class="col-8">
+            <input name="mobileNo" class="form-control text-uppercase w-50" type="number" placeholder="Mobile NO"
+              aria-label=".form-control-sm example">
+          </div>
+        </div> <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Email <span class="ms-1  text-danger"> *</span></p>
+
+          </div>
+          <div class="col-8">
+            <input name="email" class="form-control  text-uppercase w-50" type="email" placeholder="Email"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Email</p> <span class="ms-1  text-danger"> *</span>
-          <input name="email" class="form-control  text-uppercase w-25" type="email" placeholder="Email"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">NID <span class="ms-1  text-danger"> *</span></p>
+
+          </div>
+          <div class="col-5">
+            <input name="NID" class="form-control  text-uppercase w-50" type="text" placeholder="NID"
+              aria-label=".form-control-sm example">
+          </div>
+          <div class="col-3">
+            <input name="fileName" class="" type="file" aria-label=".form-control-sm example"><br>
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>NID</p> <span class="ms-1  text-danger"> *</span>
-          <input name="NID" class="form-control  text-uppercase w-25" type="text" placeholder="NID"
-            aria-label=".form-control-sm example">
-          <input name="fileName" class="" type="file" aria-label=".form-control-sm example"><br>
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Father Name <span class="ms-1  text-danger"> *</span></p>
+          </div>
+          <div class="col-8">
+            <input name="fatherName" class="form-control  text-uppercase w-50" type="text" placeholder="Father Name"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Father Name</p> <span class="ms-1  text-danger"> *</span>
-          <input name="fatherName" class="form-control  text-uppercase w-25" type="text" placeholder="Father Name"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Father's/Husband<span class="ms-1 text-danger"> *</span> <br><span
+                class="text-end mx-3">Name</span> </p>
+          </div>
+          <div class="col-8">
+            <input class="form-control text-uppercase w-50" type="text" placeholder="Father's/Husband Name"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark ">
-          <p>Father's/Husband <span class="d-flex text-center">Name</span> </p> <span class="ms-1 mx-5 text-danger">
-            *</span>
-          <input class="form-control text-uppercase w-25" type="text" placeholder="Father's/Husband Name"
-            aria-label=".form-control-sm example">
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Relation <span class="text-danger ms-1"> *</span></p>
+          </div>
+          <div class="col-2">
+            <input class="" type="radio" name="" id="">Father
+          </div>
+          <div class="col-1">
+            <input class="" type="radio" name="" id=""> Other
+          </div>
         </div>
-        <div class="d-flex p-3 text-center  bg-white text-dark">
-          Relation <span class="text-danger ms-1"> *</span>
-          <input class="" type="radio" name="" id="">
-          Father
-          <input class="" type="radio" name="" id=""> Other
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Mother's Name <span class="ms-1 text-danger"> *</span></p>
+
+          </div>
+          <div class="col-8">
+            <input class="form-control text-uppercase w-50" type="text" placeholder="Mother's Name"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Mother's Name</p> <span class="ms-1 text-danger"> *</span>
-          <input class="form-control text-uppercase w-25" type="text" placeholder="Mother's Name"
-            aria-label=".form-control-sm example">
+
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Date of Brith <span class="ms-1 text-danger"> *</span></p>
+
+          </div>
+          <div class="col-8">
+            <input class="form-control text-uppercase w-50" type="date" placeholder="Date of Brith"
+              aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark">
-          <p>Date of Brith</p> <span class="ms-1 text-danger"> *</span>
-          <input class="form-control text-uppercase w-25" type="date" placeholder="Date of Brith"
-            aria-label=".form-control-sm example">
+
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Solutation <span class="text-danger ms-1"> *</span></p>
+          </div>
+          <div class="col-8">
+            <input type="radio" name="" id=""> Mr
+            <input type="radio" name="" id=""> Mrs
+            <input type="radio" name="" id=""> None
+          </div>
         </div>
-        <div class="d-flex p-3 text-center  bg-white text-dark">
-          Solutation <span class="text-danger ms-1"> *</span>
-          <input type="radio" name="" id=""> Mr
-          <input type="radio" name="" id=""> Mrs
-          <input type="radio" name="" id=""> None
+
+        <div class="row py-1">
+          <div class="col-4">
+            <p class="text-end">Photo (Maximum 150 kb) <span class="ms-1  text-danger"> *</span></p>
+
+          </div>
+          <div class="col-8">
+            <input class="image" type="file" placeholder="PASSPORT NO" aria-label=".form-control-sm example">
+          </div>
         </div>
-        <div class="d-flex p-3 text-center bg-white text-dark ">
-          <p>Photo (Maximum 150 kb) </p> <span class="ms-1  text-danger"> *</span>
-          <input class="image" type="file" placeholder="PASSPORT NO" aria-label=".form-control-sm example">
+        <div class="row ">
+          <div class="col-6">
+            <button class="btn btn-primary" type="submit">Cancel</button>
+          </div>
+          <div class="text-end col-6">
+            <button class="btn btn-primary" type="submit">Save</button>
+          </div>
         </div>
-        <button class="btn btn-primary" type="submit">Cancel</button>
-        <button class="btn btn-primary" type="submit">Save</button>
+
     </section>
+
     </form>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
