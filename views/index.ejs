@@ -8,30 +8,152 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
-
 <body>
-  <main class="text-center">
-    <section class="mt-5 text-primary fw-bold ">
-      <div class="">
-        <h3>Police Clearance Certificate (PCC)</h3>
-        <p class="d-flex flex-column">
-          <span> For applications under Dhaka, it will take 7 working days.</span>
-          <span> For applications outside Dhaka, it may take 15 working days or more.</span>
-        </p>
+  <p class="text-right">Right aligned text on all viewport sizes.</p>
+  <main class="bg-background">
+    <div class="text-center py-5 text-primary fw-bold">
+      <h3>Police Clearance Certificate (PCC)</h3>
+      <p>For applications under Dhaka, it will take 7 working days.</p>
+      <p>For applications outside Dhaka, it may take 15 working days or more.</p>
+    </div>
+
+    <section class="w-75 mx-auto">
+      <div class="p-1 bg-background bg-heading text-dark p-2">
+        <h5 class="fw-normal border border-2">Purpose of Police Clearance</h5>
+      </div>
+
+      <div class="container py-4">
+        <div class="row ">
+          <div class="col-4">
+            <p class="text-end">Purpose <span class="text-danger">*</span></p>
+          </div>
+
+          <div class="col-8">
+            <input class="" type="radio" name="purpose" id="purpose"> Go Abroad
+            <input class="ms-3" type="radio" name="purpose" id="purpose"> Others
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <p class="text-end">Country of Travel <span class="  text-danger ms-1">*</span></p>
+          </div>
+          <div class="col-8">
+            <select class="form-select w-50" aria-label="Default select example">
+              <option value="1">a</option>
+              <option value="2">a</option>
+              <option value="3">a</option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="my-2">
-      <h5>Purpose of Police Clearence</h5>
+
+
+    <section class=" w-75 mx-auto mt-5">
+      <div class="p-1 bg-background bg-heading text-dark">
+        <h5>Personal Information</h5>
+      </div>
+      <form action="/file" method="post" enctype="multipart/form-data" class="bg-white">
+        <div class="d-flex p-3 text-center  bg-white text-dark">
+          PASSPORT NO <span class="text-danger ms-1 "> *</span>
+          <input name="passportNo" class="form-control text-uppercase w-25 " type="text" placeholder="PASSPORT NO"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p class="text-end">Issuing Country <span class="ms-1 text-danger"> *</span></p>
+          <select class="form-select w-25 " aria-label="Default select example">
+            <option value="1">a</option>
+            <option value="2">a</option>
+            <option value="3">a</option>
+          </select>
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p class="text-end">Issuing Date<span class="ms-1 text-danger"> *</span></p>
+          <input name="issuingDate" class="form-control text-uppercase w-25" type="date" placeholder="Issuing Date"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p class="text-end">Issuing Place <span class="ms-1 text-danger"> *</span></p>
+          <input name="issuingPlace" class="form-control text-uppercase w-25" type="text" placeholder="Issuing Place"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>Expiry Date <span class="ms-1 text-danger"> *</span></p>
+          <input name="expiryDate" class="form-control text-uppercase w-25" type="text" placeholder="Date"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>Mobile No</p> <span class="ms-1 text-danger"> *</span>
+          <input name="mobileNo" class="form-control text-uppercase w-25" type="number" placeholder="Mobile NO"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>Email</p> <span class="ms-1  text-danger"> *</span>
+          <input name="email" class="form-control  text-uppercase w-25" type="email" placeholder="Email"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>NID</p> <span class="ms-1  text-danger"> *</span>
+          <input name="NID" class="form-control  text-uppercase w-25" type="text" placeholder="NID"
+            aria-label=".form-control-sm example">
+          <input name="fileName" class="" type="file" aria-label=".form-control-sm example"><br>
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>Father Name</p> <span class="ms-1  text-danger"> *</span>
+          <input name="fatherName" class="form-control  text-uppercase w-25" type="text" placeholder="Father Name"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark ">
+          <p>Father's/Husband <span class="d-flex text-center">Name</span> </p> <span class="ms-1 mx-5 text-danger">
+            *</span>
+          <input class="form-control text-uppercase w-25" type="text" placeholder="Father's/Husband Name"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center  bg-white text-dark">
+          Relation <span class="text-danger ms-1"> *</span>
+          <input class="" type="radio" name="" id="">
+          Father
+          <input class="" type="radio" name="" id=""> Other
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>Mother's Name</p> <span class="ms-1 text-danger"> *</span>
+          <input class="form-control text-uppercase w-25" type="text" placeholder="Mother's Name"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark">
+          <p>Date of Brith</p> <span class="ms-1 text-danger"> *</span>
+          <input class="form-control text-uppercase w-25" type="date" placeholder="Date of Brith"
+            aria-label=".form-control-sm example">
+        </div>
+        <div class="d-flex p-3 text-center  bg-white text-dark">
+          Solutation <span class="text-danger ms-1"> *</span>
+          <input type="radio" name="" id=""> Mr
+          <input type="radio" name="" id=""> Mrs
+          <input type="radio" name="" id=""> None
+        </div>
+        <div class="d-flex p-3 text-center bg-white text-dark ">
+          <p>Photo (Maximum 150 kb) </p> <span class="ms-1  text-danger"> *</span>
+          <input class="image" type="file" placeholder="PASSPORT NO" aria-label=".form-control-sm example">
+        </div>
+        <button class="btn btn-primary" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit">Save</button>
     </section>
+    </form>
   </main>
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>

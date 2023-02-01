@@ -1,0 +1,13 @@
+* {
+  font-family: "Poppins", sans-serif;
+  color: #393939;
+  font-weight: 400;
+}
+
+.bg-background {
+  background-color: #f8f8f8;
+}
+
+.bg-heading {
+  background-color: #e4e1e1;
+}
