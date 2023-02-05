@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <main class="bg-background">
+  <main class="bg-background py-5">
     <div class="text-center py-5 text-primary fw-bold">
       <h3>Police Clearance Certificate (PCC)</h3>
       <p>For applications under Dhaka, it will take 7 working days.</p>
@@ -35,10 +35,9 @@
           <div class="col-4">
             <p class="text-end">Purpose <span class="text-danger">*</span></p>
           </div>
-
           <div class="col-8">
-            <input class="" type="radio" name="purpose" id="purpose"> Go Abroad
-            <input class="ms-3" type="radio" name="purpose" id="purpose"> Others
+            <input class="" type="radio" name="goAbroad" id="purpose" value="Go Abroad"> Go Abroad
+            <input class="ms-3" type="radio" name="others" id="purpose"> Others
           </div>
         </div>
         <div class="row">
@@ -46,10 +45,10 @@
             <p class="text-end">Country of Travel <span class="  text-danger ms-1">*</span></p>
           </div>
           <div class="col-8">
-            <select class="form-select w-50" aria-label="Default select example">
-              <option value="1">a</option>
-              <option value="2">a</option>
-              <option value="3">a</option>
+            <select class="form-select w-50 " name="countryofTravel" aria-label="Default select example">
+              <option value="a">Country</option>
+              <option value="Country">Country</option>
+              <option value="Country">a</option>
             </select>
           </div>
         </div>
@@ -59,13 +58,13 @@
       <div class="p-1 bg-background bg-heading text-dark">
         <h5>Personal Information</h5>
       </div>
-      <form action="/file" method="post" enctype="multipart/form-data" class="bg-white ">
+      <form action="/from" method="post" enctype="multipart/form-data" class="bg-white ">
         <div class="row py-1">
           <div class="col-4">
             <p class="text-end">PASSPORT NO <span class="text-danger ms-1 "> *</span></p>
           </div>
           <div class="col-8">
-            <input name="passportNo" class="form-control text-uppercase w-50 " type="text" placeholder="PASSPORT NO"
+            <input name="passportNo" class="form-control text-uppercase w-50 " type="number" placeholder="PASSPORT NO"
               aria-label=".form-control-sm example">
           </div>
         </div>
@@ -74,10 +73,10 @@
             <p class="text-end">Issuing Country <span class="ms-1 text-danger"> *</span></p>
           </div>
           <div class="col-8">
-            <select class="form-select w-50 " aria-label="Default select example">
-              <option value="1">a</option>
-              <option value="2">a</option>
-              <option value="3">a</option>
+            <select class="form-select w-50 " name="issuingCountry" aria-label="Default select example">
+              <option value="a">Country</option>
+              <option value="Country">Country</option>
+              <option value="Country">a</option>
             </select>
           </div>
         </div>
@@ -104,7 +103,7 @@
             <p class="text-end">Expiry Date <span class="ms-1 text-danger"> *</span></p>
           </div>
           <div class="col-8">
-            <input name="expiryDate" class="form-control text-uppercase w-50" type="text" placeholder="Date"
+            <input name="expiryDate" class="form-control text-uppercase w-50" type="date" placeholder="Date"
               aria-label=".form-control-sm example">
           </div>
         </div>
@@ -116,7 +115,8 @@
             <input name="mobileNo" class="form-control text-uppercase w-50" type="number" placeholder="Mobile NO"
               aria-label=".form-control-sm example">
           </div>
-        </div> <div class="row py-1">
+        </div>
+        <div class="row py-1">
           <div class="col-4">
             <p class="text-end">Email <span class="ms-1  text-danger"> *</span></p>
 
@@ -132,11 +132,11 @@
 
           </div>
           <div class="col-5">
-            <input name="NID" class="form-control  text-uppercase w-50" type="text" placeholder="NID"
+            <input name="Nid" class="form-control  text-uppercase w-50" type="number" placeholder="NID"
               aria-label=".form-control-sm example">
           </div>
           <div class="col-3">
-            <input name="fileName" class="" type="file" aria-label=".form-control-sm example"><br>
+            <input name="nid" class="nid" type="file" aria-label=".form-control-sm example"><br>
           </div>
         </div>
         <div class="row py-1">
@@ -154,20 +154,19 @@
                 class="text-end mx-3">Name</span> </p>
           </div>
           <div class="col-8">
-            <input class="form-control text-uppercase w-50" type="text" placeholder="Father's/Husband Name"
-              aria-label=".form-control-sm example">
+            <input name="fatherHusbandname" class="form-control text-uppercase w-50" type="text"
+              placeholder="Father's/Husband Name" aria-label=".form-control-sm example">
           </div>
         </div>
         <div class="row py-1">
           <div class="col-4">
             <p class="text-end">Relation <span class="text-danger ms-1"> *</span></p>
           </div>
-          <div class="col-2">
+          <div class="col-8">
             <input class="" type="radio" name="" id="">Father
-          </div>
-          <div class="col-1">
             <input class="" type="radio" name="" id=""> Other
           </div>
+
         </div>
         <div class="row py-1">
           <div class="col-4">
@@ -175,27 +174,24 @@
 
           </div>
           <div class="col-8">
-            <input class="form-control text-uppercase w-50" type="text" placeholder="Mother's Name"
+            <input name="motherName" class="form-control text-uppercase w-50" type="text" placeholder="Mother's Name"
               aria-label=".form-control-sm example">
           </div>
         </div>
-
         <div class="row py-1">
           <div class="col-4">
             <p class="text-end">Date of Brith <span class="ms-1 text-danger"> *</span></p>
-
           </div>
           <div class="col-8">
-            <input class="form-control text-uppercase w-50" type="date" placeholder="Date of Brith"
+            <input name="dateBrith" class="form-control text-uppercase w-50" type="date" placeholder="Date of Brith"
               aria-label=".form-control-sm example">
           </div>
         </div>
-
         <div class="row py-1">
           <div class="col-4">
             <p class="text-end">Solutation <span class="text-danger ms-1"> *</span></p>
           </div>
-          <div class="col-8">
+          <div class="col-8 ">
             <input type="radio" name="" id=""> Mr
             <input type="radio" name="" id=""> Mrs
             <input type="radio" name="" id=""> None
@@ -208,7 +204,10 @@
 
           </div>
           <div class="col-8">
-            <input class="image" type="file" placeholder="PASSPORT NO" aria-label=".form-control-sm example">
+
+            <input class="image" type="file" name="image" placeholder="PASSPORT NO"
+              aria-label=".form-control-sm example">
+
           </div>
         </div>
         <div class="row ">
@@ -219,9 +218,7 @@
             <button class="btn btn-primary" type="submit">Save</button>
           </div>
         </div>
-
     </section>
-
     </form>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
