@@ -4,7 +4,7 @@ const multer = require('multer')
 const fileUpload = require('express-fileupload');
 const app = express()
 const path = require('path')
-const { files } = require('./upload')
+const { filesUpload } = require('./upload')
 //set the view engine to ejs
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }))
@@ -37,7 +37,7 @@ app.post('/from', (req, res) => {
   console.log('passportNo', req.body.passportNo)
   console.log('goAbroad', req.body.goAbroad)
   console.log('countryofTravel', req.body.countryofTravel)
-  const nidFile = files('./public/nid').single('nid');
+  const nidFile = filesUpload('./public/nid').single('nid');
   nidFile(req, res, (err) => {
     const { file } = req;
     console.log('nidfile', file);
@@ -59,7 +59,7 @@ app.post('/from', (req, res) => {
     //   }
     // }
   })
-  const uploadFile = files('./public/image').single('image');
+  const uploadFile = filesUpload('./public/image').single('image');
   uploadFile(req, res, (err) => {
     const { file } = req;
     console.log('file', file);

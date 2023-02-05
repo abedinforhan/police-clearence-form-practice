@@ -3,7 +3,7 @@ const app = express()
 const multer = require('multer')
 const path = require('path')
 const { extname } = require('path');
-const fileUpload = (destination) => {
+const filesUpload = (destination) => {
 	const stroage = multer.diskStorage({
 		destination: function (req, file, cb) {
 			cb(null, destination)
@@ -32,7 +32,7 @@ function fileType(file, cb) {
 	}
 }
 
-module.exports = { fileUpload };
+module.exports = { filesUpload };
 
 
 
